@@ -1,0 +1,18 @@
+services:
+  tenant1:
+    container_name: next-app-tenant1
+    build: .
+    env_file:
+      - .env.tenant1
+    ports:
+      - "3001:3000"
+    restart: always
+
+  tenant2:
+    container_name: next-app-tenant2
+    build: .
+    env_file:
+      - .env.tenant2
+    ports:
+      - "3002:3000"
+    restart: always
